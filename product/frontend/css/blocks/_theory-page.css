@@ -1,0 +1,27 @@
+.theory-page {
+    display: none;
+}
+
+.theory-page__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.theory-page__title,
+.theory-page__paragraph {
+    color: var(--secondary-color);
+}
+
+.theory-page__paragraph {
+    line-height: 2rem;
+    font-size: 1.15rem;
+    text-indent: 2rem;
+}
+
+.theory-page__button {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}

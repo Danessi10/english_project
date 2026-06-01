@@ -1,0 +1,23 @@
+.container {
+    padding: 0 var(--padding);
+    margin: 0 auto;
+}
+
+.is-active {
+    display: block !important;
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+.page-inner {
+    min-height: 100vh;
+    padding: 6.75rem 0 1rem;
+}
+
+@media (max-width: 767px) {
+    .page-inner {
+        padding: 5rem 0 1rem;
+    }
+}

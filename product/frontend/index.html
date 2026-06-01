@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn English</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./scripts/main.js" defer></script>
+</head>
+
+<body class="anim">
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <button type="button" aria-label="Открыть меню" class="header__menu-button">
+                    <span aria-hidden="true"></span>
+                    <div aria-hidden="true"></div>
+                </button>
+                <nav class="header__nav nav">
+                    <ul class="header__nav-list nav__list">
+                        <li class="header__nav-item nav__item">
+                            <button data-target="main" type="button" class="header__nav-button nav__button">
+                                Главная
+                            </button>
+                        </li>
+                        <li class="header__nav-item nav__item">
+                            <button data-target="tasks" type="button" class="header__nav-button nav__button">
+                                Учиться
+                            </button>
+                        </li>
+                        <li class="header__nav-item nav__item">
+                            <button data-target="profile" type="button" class="header__nav-button nav__button">
+                                Профиль
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+                <button type="button" aria-label="Войти в аккаунт" class="header__login-button login-button">
+                    <div aria-hidden="true"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="main-menu-page is-active" name="main">
+            <div class="container">
+                <div class="main-menu-page__inner page-inner">
+                    <div class="main-menu-page__content">
+                        <p class="main-menu-page__quote quote">Английский язык - язык открывателей настоящего,
+                            заложивший
+                            начало для будущего</p>
+                        <h1 class="main-menu-page__title title">
+                            Платформа для изучения английского языка
+                        </h1>
+                    </div>
+                    <button type="button" class="main-menu-page__button button" data-target="tasks">
+                        Начать учиться
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="learning-page" name="learning">
+            <div class="container">
+                <div class="learning-page__inner page-inner">
+                    <div data-target="tasks" name="theory" role="button" class="learning-page__chapter">
+                        <h3 class="learning-page__chapter-title title">Теория</h3>
+                    </div>
+                    <div data-target="tasks" name="practice" role="button" class="learning-page__chapter">
+                        <h3 class="learning-page__chapter-title title">Практика</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tasks-page">
+            <div class="container">
+                <div class="tasks-page__inner page-inner">
+                    <h2 class="tasks-page__title title">Темы</h2>
+                    <ul class="tasks-page__list">
+                        <!-- <li class="tasks-page__list-item">
+                            <button aria-label="Открыть тему" class="tasks-page__button button">
+                                <h5 class="tasks-page__task-name">Артикли</h5>
+                            </button>
+                        </li>
+                        <li class="tasks-page__list-item">
+                            <button aria-label="Открыть тему" class="tasks-page__button button">
+                                <h5 class="tasks-page__task-name">Времена</h5>
+                            </button>
+                        </li>
+                        <li class="tasks-page__list-item">
+                            <button aria-label="Открыть тему" class="tasks-page__button button">
+                                <h5 class="tasks-page__task-name">Предлоги</h5>
+                            </button>
+                        </li>
+                        <li class="tasks-page__list-item">
+                            <button aria-label="Открыть тему" class="tasks-page__button button">
+                                <h5 class="tasks-page__task-name">Вопросы</h5>
+                            </button>
+                        </li>
+                        <li class="tasks-page__list-item">
+                            <button aria-label="Открыть тему" class="tasks-page__button button">
+                                <h5 class="tasks-page__task-name">Даты</h5>
+                            </button>
+                        </li> -->
+                    </ul>
+                </div>
+                <div role="dialog" class="tasks-page__format pop-up">
+                    <div class="tasks-page__format-inner pop-up__inner">
+                        <div class="tasks-page__format-content pop-up__content">
+                            <button type="button" class="pop-up__cross-button cross-button"></button>
+                            <h3 class="tasks-page__format-title pop-up__title">Артикли</h3>
+                            <button data-target="theory" type="button"
+                                class="tasks-page__format-button pop-up__button button button--theme--dark">Теория</button>
+                            <button data-target="practice" type="button"
+                                class="tasks-page__format-button pop-up__button button button--theme--dark">Практика</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="profile-page">
+            <div class="container">
+                <div class="profile-page__inner page-inner">
+                    <div class="profile-page__content">
+                        <img src="./images/mountain.jpg" alt="Фото пользователя" class="profile-page__thumbnail">
+                        <div class="profile-page__user-info">
+                            <h3 class="profile-page__username">Username</h3>
+                            <p class="profile-page__progress">Lessons completed:</p>
+                        </div>
+                    </div>
+                    <button type="button" class="profile-page__logout-button button button--theme--dark">
+                        Выйти
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="theory-page">
+            <div class="container">
+                <div class="theory-page__inner page-inner">
+                    <h2 class="theory-page__title title"></h2>
+                    <p class="theory-page__paragraph paragraph"></p>
+                    <button data-target="practice" type="button"
+                        class="theory-page__button button button--theme--dark">Перейти к практике</button>
+                </div>
+            </div>
+        </section>
+        <section class="practice-page">
+            <div class="container">
+                <div class="practice-page__inner page-inner">
+                    <h2 class="practice-page__title title"></h2>
+                    <p class="practice-page__challenge"></p>
+                    <ul class="practice-page__selectors-list">
+                        <!-- <li class="practice-page__selectors-list-item">
+                            <button type="button"
+                                class="practice-page__selector button button--theme--dark">Ответ</button>
+                        </li> -->
+                    </ul>
+                    <button data-target="theory" type="button"
+                        class="practice-page__button button button--theme--dark"></button>
+                    <button type="button" class="practice-page__next-button button button--theme--dark">Далее</button>
+                </div>
+            </div>
+        </section>
+        <section class="admin-page">
+            <div class="container">
+                <form action="/" method="post" class="admin-page__editor pop-up">
+                    <div class="admin-page__editor-inner pop-up__inner">
+                        <button type="button" class="pop-up__cross-button cross-button"></button>
+                        <div class="admin-page__editor-content pop-up__content">
+                            <h3 class="admin-page__editor-title pop-up__title">Редактирование</h3>
+                            <div class="admin-page__editor-field pop-up__field">
+                                <label class="admin-page__editor-task-name pop-up__label" for="editor-task-name">
+                                    Название
+                                </label>
+                                <input class="admin-page__editor-input pop-up__input" id="editor-task-name" type="text">
+                            </div>
+                            <ul class="admin-page__editor-chapters-list">
+                                <li class="admin-page__editor-chapters-item">
+                                    <div class="admin-page__editor-chapter">
+                                        <h5 class="admin-page__editor-chapter-name">Теория</h5>
+                                        <div class="admin-page__editor-field pop-up__field">
+                                            <label class="admin-page__editor-label pop-up__label" for="theory-content">
+                                                Содержимое
+                                            </label>
+                                            <textarea id="theory-content" type="text"
+                                                class="admin-page__editor-input pop-up__input">
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="admin-page__editor-chapters-item">
+                                    <div class="admin-page__editor-chapter">
+                                        <h5 class="admin-page__editor-chapter-name">Практика</h5>
+                                        <ul class="admin-page__editor-practice-list"></ul>
+                                        <button type="button" data-setting-type="add"
+                                            class="admin-page__editor-practice-button button button--theme--dark">Добавить
+                                            задание</button>
+                                    </div>
+                                </li>
+                            </ul>
+                            <button data-setting-type="save"
+                                class="admin-page__editor-save-button button button--theme--dark" type="button">
+                                Сохранить
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="admin-page__inner page-inner">
+                    <h2 class="admin-page__title title title--theme--dark">Панель администратора</h2>
+                    <div class="admin-page__content">
+                        <ul class="admin-page__buttons-list">
+                            <li class="admin-page__buttons-list-item">
+                                <button type="button"
+                                    class="admin-page__back-button admin-page__buttons-list-button button button--theme--dark is-hidden">
+                                    Назад
+                                </button>
+                            </li>
+                            <li class="admin-page__buttons-list-item">
+                                <button type="button"
+                                    class="admin-page__add-button admin-page__buttons-list-button admin-page__data-item-editor-button button button--theme--dark is-hidden">
+                                    Добавить
+                                </button>
+                            </li>
+                        </ul>
+                        <ul class="admin-page__settings-list">
+                            <li class="admin-page__settings-item">
+                                <button data-setting-target="users" type="button"
+                                    class="admin-page__settings-button button button--theme--dark">
+                                    Пользователи
+                                </button>
+                            </li>
+                            <li class="admin-page__settings-item">
+                                <button data-setting-target="tasks" type="button"
+                                    class="admin-page__settings-button button button--theme--dark">
+                                    Учебный материал
+                                </button>
+                            </li>
+                        </ul>
+                        <ul class="admin-page__data-list is-hidden"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="aside-menu">
+            <nav class="aside-menu__nav nav">
+                <ul class="aside-menu__nav-list nav__list nav__list--column">
+                    <li class="aside-menu__nav-item nav__item">
+                        <button data-target="main" type="button" class="aside-menu__nav-button nav__button">
+                            Главная
+                        </button>
+                    </li>
+                    <li class="aside-menu__nav-item nav__item">
+                        <button data-target="tasks" type="button" class="aside-menu__nav-button nav__button">
+                            Учиться
+                        </button>
+                    </li>
+                    <li class="aside-menu__nav-item nav__item">
+                        <button data-target="profile" type="button" class="aside-menu__nav-button nav__button">
+                            Профиль
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div id="login-info"></div>
+        <form action="/login" method="POST" class="login-form pop-up" id="login-form">
+            <div class="login-form__inner pop-up__inner">
+                <button type="button" class="login-form__cross-button pop-up__cross-button cross-button"></button>
+                <div class="login-form__content pop-up__content">
+                    <h3 class="login-form__title pop-up__title">Вход</h3>
+                    <input class="login-form__input pop-up__input" type="text" id="username" name="name" required
+                        placeholder="Имя пользователя" minlength="2">
+                    <input class="login-form__input pop-up__input" type="password" id="userpassword" name="password"
+                        required placeholder="Пароль" minlength="5">
+                    <button type="submit" id="login-submit-button"
+                        class="login-form__button pop-up__button button button--theme--dark">
+                        Войти
+                    </button>
+                    <button type="button" id="login-under-button" class="login-form__under-button pop-up__under-button">
+                        Зарегистрироваться
+                    </button>
+                </div>
+            </div>
+        </form>
+        <!-- <form action="/submit" method="get" class="login-form pop-up" id="reg-form">
+            <div class="container">
+                <div class="login-form__inner pop-up__inner">
+                    <button type="button" class="login-form__cross-button pop-up__cross-button cross-button"></button>
+                    <h3 class="login-form__title pop-up__title">Регистрация</h3>
+                    <input class="login-form__input pop-up__input" type="text" id="username" name="username" required
+                        placeholder="Придумайте имя" minlength="2">
+                    <input class="login-form__input pop-up__input" type="password" id="userpassword" name="username"
+                        required placeholder="Придумайте пароль" minlength="5">
+                    <button type="submit"
+                        class="login-form__button pop-up__button button button--theme--dark">Зарегистрироваться</button>
+                    <button type="button" id="login-button" class="login-form__under-button pop-up__under-button">Уже
+                        есть аккаунт?</button>
+                </div>
+            </div>
+        </form> -->
+    </main>
+</body>
+
+</html>

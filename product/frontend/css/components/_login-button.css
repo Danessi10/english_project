@@ -1,0 +1,48 @@
+.login-button {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: .0625rem solid var(--main-color);
+    padding: .3rem;
+}
+
+.login-button::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200%;
+    height: 200%;
+}
+
+.login-button div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+}
+
+.login-button div::before,
+.login-button div::after {
+    content: "";
+    display: block;
+    background-color: var(--main-color);
+}
+
+.login-button div::before {
+    width: .65rem;
+    height: .65rem;
+    border-radius: 50%;
+}
+
+.login-button div::after {
+    width: 1.5rem;
+    height: .5rem;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+}

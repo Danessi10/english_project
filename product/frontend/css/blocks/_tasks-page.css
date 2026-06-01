@@ -1,0 +1,43 @@
+.tasks-page {
+    display: none;
+    background: url("../../images/1.jpg") 70% 50% / cover no-repeat;
+}
+
+.tasks-page__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.tasks-page__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tasks-page__button {
+    width: 100%;
+    outline: .0625rem solid var(--secondary-color);
+    padding: 1.5rem;
+}
+
+@media (max-width: 549px) {
+    .tasks-page__title {
+        font-size: 2.1rem;
+    }
+
+    .tasks-page__button {
+        padding: 1rem;
+    }
+}
+
+.tasks-page__button:hover {
+    scale: unset;
+    outline: .125rem solid var(--shine-color);
+}
+
+.tasks-page__task-name {
+    font-size: 1rem;
+}

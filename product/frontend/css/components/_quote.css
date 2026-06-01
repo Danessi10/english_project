@@ -1,0 +1,12 @@
+.quote {
+    font: italic 1.15rem sans-serif;
+    color: var(--main-color);
+}
+
+@media (max-width: 1199px) {
+    .quote {
+        max-width: 17rem;
+        line-height: 2rem;
+        font-size: 1rem;
+    }
+}

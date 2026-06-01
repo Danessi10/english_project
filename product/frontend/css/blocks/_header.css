@@ -1,0 +1,76 @@
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--secondary-color);
+}
+
+.header__inner {
+    width: calc(100vw - calc(var(--padding) * 2));
+    min-height: 5.75rem;
+    padding: var(--padding) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.header__menu-button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    width: 2rem;
+    aspect-ratio: 1 / 1;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.header__menu-button span,
+.header__menu-button::before,
+.header__menu-button::after {
+    display: block;
+    width: 100%;
+    height: .125rem;
+    background-color: var(--main-color);
+}
+
+.header__menu-button::before,
+.header__menu-button::after {
+    content: "";
+}
+
+.header__menu-button div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200%;
+    height: 200%;
+    transform: translate(-50%, -50%);
+}
+
+.header__login-button {
+    position: relative;
+    aspect-ratio: 1;
+    width: 2rem;
+}
+
+@media (max-width: 767px) {
+    .header__inner {
+        min-height: unset;
+    }
+
+    .header__nav-list {
+        display: none;
+    }
+}
+
+@media (max-width: 549px) {
+    .header__menu-button div {
+        width: 150%;
+        height: 150%;
+    }
+}

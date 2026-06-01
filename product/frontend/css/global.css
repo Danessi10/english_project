@@ -1,0 +1,23 @@
+body {
+    font: 1rem sans-serif;
+    color: var(--main-color);
+    overflow-x: hidden;
+}
+
+body.anim {
+    animation: coming 2s;
+}
+
+body.unscrolled {
+    overflow: hidden;
+}
+
+@keyframes coming {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

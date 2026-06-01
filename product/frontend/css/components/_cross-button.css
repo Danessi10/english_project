@@ -1,0 +1,32 @@
+.cross-button {
+    position: absolute;
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+@media (max-width: 1023px) {
+    .cross-button {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.cross-button::before,
+.cross-button::after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    content: "";
+    display: block;
+    height: 100%;
+    width: .0625rem;
+    background-color: var(--secondary-color);
+}
+
+.cross-button::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.cross-button::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+}

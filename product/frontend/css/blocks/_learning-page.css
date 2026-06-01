@@ -1,0 +1,56 @@
+.learning-page {
+    display: none;
+}
+
+.learning-page__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.learning-page__chapter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17rem;
+    height: 25rem;
+    background-color: var(--main-color);
+    outline: .0625rem solid var(--secondary-color);
+    cursor: pointer;
+    transition-duration: .5s;
+    background: url("../../images/mountain.jpg") 50% 50% / cover no-repeat;
+    border-radius: .3125rem;
+}
+
+.learning-page__chapter:hover {
+    scale: 1.01;
+    box-shadow: var(--shine-color) 0 0 4rem;
+}
+
+.learning-page__thumbnail {
+    max-width: 100%;
+}
+
+@media (max-width: 1023px) {
+    .learning-page__inner {
+        gap: 5rem;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 767px) {
+    .learning-page__inner {
+        gap: 1rem;
+    }
+
+    .learning-page__chapter-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 499px) {
+    .learning-page__chapter-title {
+        font-size: 1.5rem;
+    }
+}

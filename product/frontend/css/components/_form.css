@@ -1,0 +1,27 @@
+#login-info {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 20rem;
+    max-width: 20rem;
+    padding: 1rem;
+    color: var(--main-color);
+    z-index: 5000;
+    text-align: center;
+}
+
+#login-info.is-active {
+    display: block;
+}
+
+@keyframes track-in {
+    from {
+        top: -50%,
+    }
+
+    to {
+        top: 0;
+    }
+}

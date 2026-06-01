@@ -1,0 +1,30 @@
+.button {
+    font: 1rem sans-serif;
+    cursor: pointer;
+    transition-duration: .1s;
+    padding: var(--padding) calc(var(--padding) * 2);
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    border-radius: .5rem;
+}
+
+.button:hover {
+    color: var(--main-color);
+    background-color: var(--accent-color);
+    scale: 1.01;
+}
+
+.button--theme--dark {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+}
+
+/* .button--theme--dark:hover {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+} */
+
+.button--hover--accent:hover {
+    background-color: var(--accent-color);
+    color: var(--main-color);
+}
